@@ -1,10 +1,10 @@
 {
   "builds": [{
-      "src": "deploy_demo/wsgi.py",
+      "src": "StudyProject/wsgi.py",
       "use": "@vercel/python"
   }],
   "routes": [{
       "src": "/(.*)",
-      "dest": "deploy_demo/wsgi.py"
+      "dest": "StudyProject/wsgi.py"
   }]
 }
