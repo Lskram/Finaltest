@@ -53,6 +53,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>About</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'admin:index' %}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Admin</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -72,7 +77,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">ตัวเลือกเพิ่มเติม</h6>
-                        <a class="collapse-item" href="{% url 'general' %}">แผนจัดซื้อ</a>
+                        <a class="collapse-item" href="{% url 'general' %}">แผนกจัดซื้อ</a>
                         <a class="collapse-item" href="{% url 'elective_subjects' %}">แผนกจัดหาลูกค้า</a>
                         <a class="collapse-item" href="{% url 'special_subjects' %}">แผนกบริการหลังการขาย</a>
                     </div>
