@@ -6,14 +6,16 @@ from . import models
 @admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = [
-        'category'
+        'name'
     ]
 
 @admin.register(models.Classes)
 class ClassesAdmin(admin.ModelAdmin):
     list_display = [
-        'class_id',
-        'class_name',
-        'class_category',
-        'on_register',
+        'name',
+        'lastname',
+        'gender',
+        'age',
+        'Educationlevel',
+        'department',
     ]

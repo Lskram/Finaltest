@@ -4,28 +4,28 @@ from . import models
 
 def Home(request):
     context = {}
-    classes = models.Classes.objects.all().order_by("id")
+    classes = models.Classes.objects.all().order_by("name")
    
     context ['classes'] = classes
     return render (request,"home.html", context)
     
 def General(request):
     context = {}
-    classes = models.Classes.objects.filter(class_category=1).order_by("id")
+    classes = models.Classes.objects.filter(department=2).order_by("name")
    
     context ['classes'] = classes
     return render (request,"general.html", context)
     
 def Elective_subjects(request):
     context = {}
-    classes = models.Classes.objects.filter(class_category=2).order_by("id")
+    classes = models.Classes.objects.filter(department=3).order_by("name")
    
     context ['classes'] = classes
     return render (request,"elective_subjects.html", context)
 
 def Special_subjects(request):
     context = {}
-    classes = models.Classes.objects.filter(class_category=3).order_by("id")
+    classes = models.Classes.objects.filter(department=4).order_by("name")
    
     context ['classes'] = classes
     return render (request,"special_subjects.html", context)

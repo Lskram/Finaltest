@@ -7,24 +7,20 @@ from django.db import models
 
 # หมวดหมู่รายวิชา
 class Category(models.Model):
-    category = models.CharField(max_length=128) # ชื่อหมวดหมู่วิชาเรียน
+    name = models.CharField(max_length=256) # ชื่อ
 
     def __str__(self):
-        return self.category
+        return self.name
 
 
 # รายวิชา
 class Classes(models.Model):
-    class_id = models.CharField(max_length=10) # รหัสรายวิชา
-    class_name = models.CharField(max_length=128) # ชื่อรายวิชา
-    class_credit = models.IntegerField() # หน่วยกิต
-    class_year = models.IntegerField() # ปีการศึกษา
-    semester = models.IntegerField() # ภาคเรียน    
-    teacher = models.CharField(max_length=255) # คุณครูประจำวิชา
-    
-    class_category = models.ForeignKey(Category, on_delete=models.CASCADE) # หมวดหมู่รายวิชา
-
-    on_register = models.BooleanField(default=False) # สถานะการเปิดการลงทะเบียน
+    name = models.CharField(max_length=10) # ชื่อ
+    lastname = models.CharField(max_length=256) # นามสกุล
+    gender = models.CharField(max_length=256) # เพศ
+    age = models.IntegerField() # อายุ
+    Educationlevel = models.CharField(max_length=256)
+    department = models.ForeignKey(Category, on_delete=models.CASCADE) # หมวดหมู่รายวิชา
 
     def __str__(self):
-        return self.class_name
+        return self.name

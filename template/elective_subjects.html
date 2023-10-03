@@ -17,26 +17,24 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>รหัสวิชา</th>
-                            <th>ชื่อวิชา</th>
-                            <th>หน่วยกิต</th>
-                            <th>ปีการศึกษา</th>
-                            <th>ภาคเรียน</th>
-                            <th>คุณครูประจำวิชา</th>
-                            <th>หมวดหมู่รายวิชา</th>
+                            <th>ชื่อ</th>
+                            <th>นามสกุล</th>
+                            <th>เพศ</th>
+                            <th>อายุ</th>
+                            <th>ระดับการศึกษา</th>
+                            <th>แผนกงานที่สังกัด</th>
                         </tr>
                     </thead>
                     
                     <tbody>
                         {% for class in classes %}
                         <tr>
-                            <td>{{class.class_id}}</td>
-                            <td>{{class.class_name}}</td>
-                            <td>{{class.class_credit}}</td>
-                            <td>{{class.class_year}}</td>
-                            <td>{{class.semester}}</td>
-                            <td>{{class.teacher}}</td>
-                            <td>{{class.class_category}}</td>
+                            <td>{{class.name}}</td>
+                            <td>{{class.lastname}}</td>
+                            <td>{{class.gender}}</td>
+                            <td>{{class.age}}</td>
+                            <td>{{class.Educationlevel}}</td>
+                            <td>{{class.department}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
