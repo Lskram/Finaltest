@@ -7,7 +7,7 @@ from django.db import models
 
 # หมวดหมู่รายวิชา
 class Category(models.Model):
-    name = models.CharField(max_length=256) # ชื่อ
+    name = models.CharField(max_length=256)
 
     def __str__(self):
         return self.name
