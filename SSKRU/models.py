@@ -13,14 +13,14 @@ class Category(models.Model):
         return self.name
 
 
-# รายวิชา
+
 class Classes(models.Model):
-    name = models.CharField(max_length=10) # ชื่อ
-    lastname = models.CharField(max_length=256) # นามสกุล
-    gender = models.CharField(max_length=256) # เพศ
-    age = models.IntegerField() # อายุ
+    name = models.CharField(max_length=10)
+    lastname = models.CharField(max_length=256)
+    gender = models.CharField(max_length=256)
+    age = models.IntegerField()
     Educationlevel = models.CharField(max_length=256)
-    department = models.ForeignKey(Category, on_delete=models.CASCADE) # หมวดหมู่รายวิชา
+    department = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
